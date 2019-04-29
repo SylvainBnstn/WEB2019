@@ -4,9 +4,11 @@
 		<meta charset="utf-8"> 
 		<title>Site ECE Amazon</title> 
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="Style.css" rel="stylesheet" type="text/css"/>
 	<script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
 		<script type="text/javascript">     
 			$(document).ready(function(){          
 				$('.header').height($(window).height()); 
@@ -15,49 +17,60 @@
 	</head> 
 	
 	<body> 
-		
 		<div>
 		<img src="ECEAmazon.jpg" alt="logo" width=400 height="100" />
-	   	 
+		</div>
+		
+	   	 <div>
 			 
-		<div class="connexion_form">
+		    <div class="connexion_form">
 
-			<div class="container-fluid">
+			  <div class="container-fluid">
+				
 				<div class="row">
-
+					
+           <!--Notre formulaire de connection-->
 			<form class="col-sm-offset-3 col-sm-5">		
-           <legend>Connectez-vous</legend>
-				
-           <div class="form-group">
-          <label for="texte">Identifiant </label>
-           <input id="text" type="text" class="form-control">
-          </div>
-				
-			<div class="form-group">
-          <label for="ConfirmPassword"> Password</label>
-          <input id="password" type="password" class="form-control" name="ConfirmPassword" ng-model="ConfirmPassword" />
-           </div>
+               <legend>Connectez-vous</legend>
+			    <!--Identifiant-->
+                  <div class="form-group">
+                    <label for="identifiant">Identifiant </label>
+                        <input id="identifiant" type="text" class="form-control">
+                  </div>
+				<!--Mot de passe-->
+			      <div class="form-group">
+                    <label for="password"> Password</label>
+                    <input id="password" type="password" class="form-control" name="Password"/>
+                  </div>
+				<!--Bouton de soumission-->
 				<button type="submit" class="btn btn-primary btn-lg">Connexion</button>
 				 
-           </form>
-					<div class= "col-sm-offset-6 col-sm 5">
-						<br><br><br>
-				 
-				 <button type="submit" class="btn btn-primary btn-lg">Créer un compte</button> <br> <br> 
-				 <button type="submit" class="btn btn-primary btn-lg">Vous etes vendeur</button>
-					</div>
-				
-				
-	
+             </form>
 					
+			
+				<div class= "col-sm-offset-6 col-sm 5"><br><br><br>
+						
+				 <!--Boutons pour creer un compte et se connecter en tant que vendeur-->
+						
+					<div>
+						<a href="compte_acheteur.html">
+				         <button type="submit" class="btn btn-primary btn-lg">Créer un compte</button> </a> <br> <br>
+					</div>
+						
+					<div>
+						<a href="connection_vendeur.html">
+				        <button type="submit" class="btn btn-primary btn-lg">Vous etes vendeur</button>
+						</a>
+					</div>
+				</div>
 		       </div>
 			</div>
-			
 		  </div>
+			 
+			 <!--Lien vers la page d'accueil-->
 			<a href="Page_accueil.html">>>Acceder directement au site</a> 
 			
 		</div>
-	
 	</body>
 </html> 
 

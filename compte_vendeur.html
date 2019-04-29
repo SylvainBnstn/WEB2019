@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8"> 
+		<title>Site ECE Amazon</title> 
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="Style.css" rel="stylesheet" type="text/css"/>
+	<script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript">     
+			$(document).ready(function(){          
+				$('.header').height($(window).height()); 
+			});
+		</script> 
+	</head> 
+	
+	<body> 
+	<!--Logo-->
+		<div>
+		<img src="ECEAmazon.jpg" alt="logo" width=400 height="100" />
+		</div>
+		
+				<!--Centre le texte qui n'est pas dans un formulaire-->
+			<div class="connexion_form">
+			<div class="container-fluid">
+				
+				<div class="row">	
+				 <legend>Creez votre compte</legend>
+				 </div>
+					<!--Formulaire fait 12 colones-->
+				<form class="form-horizontal col-sm-12">
+					
+						<!--Premiere moitie de page (6 colones)-->
+				   <div class="col-sm-6">
+			          <!--Prenom-->
+				     <div class="row">
+                      <div class="form-group">
+                       <label for="prenom" class="col-sm-3 control-label">Prenom : </label>
+                         <div class="col-sm-9">
+                           <input name ="prenom" id="prenom" placeholder="Votre prenom" type="text" class="form-control">
+                        </div>
+                      </div>
+		              </div>
+					   
+					   
+					   <!--Nom-->
+
+                   <div class="row">
+                    <div class="form-group">
+                     <label for="nom" class="col-sm-3 control-label">Nom : </label>
+                       <div class="col-sm-9">
+                        <input name ="nom" id="nom" placeholder="Votre nom" type="text" class="form-control">
+                        </div>
+                    </div>
+		           </div>
+					   <!--Pseudo-->
+					
+				<div class="row">
+                  <div class="form-group">
+                   <label for="pseudo" class="col-sm-3 control-label">Pseudo : </label>
+                     <div class="col-sm-9">
+                      <input name ="pseudo" id="pseudo" placeholder="Votre Pseudo" type="text" class="form-control">
+                     </div>
+                  </div>
+		        </div>
+					   
+					      <!--Mot de passe-->
+					<div class="row">
+                      <div class="form-group">
+                      <label for="mdp" class="col-sm-3 control-label">Telephone : </label>
+                      <div class="col-sm-9">
+                       <input name ="mdp" id="mdp" placeholder="Votre mot de passe" type="text" class="form-control">
+                     </div>
+                     </div>
+		            </div>
+					   <!--Email-->
+					
+				<div class="row">
+                  <div class="form-group">
+                   <label for="email" class="col-sm-3 control-label">Email : </label>
+                 <div class="col-sm-9">
+                    <input name ="email" id="email" placeholder="Votre Email" type="text" class="form-control">
+                 </div>
+                 </div>
+		        </div>
+					   
+					   
+			</div>
+					
+					
+					<!-- Deuxieme moitie de page (de la 6eme a la 12eme colone)-->
+				<div class="col-sm-6">
+						
+					<div class="row">
+                     <div class="form-group">
+				  
+                         <div class="col-sm-offset-3 col-sm-9">
+				      <img src="Profil.jpg" class="img-circle">
+                       <input name ="photo" id="photo" placeholder="Nom de la photo a charger" type="text" class="form-control">
+                       </div>  
+					  
+                     </div>
+		          </div>
+				</div>
+	
+               </form>
+				
+	            <!--Bouton pour crer le contact-->
+				<div class="form-group">
+                   <button type="submit" class="pull-right btn btn-default">Creer mon compte vendeur </button>
+                </div>
+
+		    </div>
+		</div>
+	</body>
+</html> 
