@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8"> 
+		<title>Site ECE Amazon</title> 
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <link href="Style.css" rel="stylesheet" type="text/css"/>
+	     <script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript">     
+			$(document).ready(function(){          
+				$('.header').height($(window).height()); 
+			});
+		</script> 
+	</head> 
+	
+	<body> 
+		
+	                         <!--Logo-->
+		<div>
+		     <img src="ECEAmazon.jpg" alt="logo" width=400 height="100" />
+		</div>
+		 <!--Barre navigation-->
+		<div>
+			<div>
+            <div class="col-sm-3 toolbarstyle" style="background-color: rgb(174,174,174);"> <a href="vendeur-vendre.html" style="color : white">Vendre un item</a></div>
+            <div class="col-sm-3 toolbarstyle" style="background-color: rgb(74,74,74);"> <a href="vendeur-suppr.html" style = "color : white ">Supprimer un item</a></div>
+            <div class="col-sm-4 toolbarstyle" style="background-color: rgb(74,74,74);"> </div>
+            <div class="col-sm-2 toolbarstyle" style="background-color: rgb(74,74,74);"> <a href="vendeur-votrecompte.html" style = "color : white">Votre compte</a></div>
+          <br>
+	   </div>
+		</div>
+		<div>
+		
+			     <div class="container-fluid">
+				
+				      <div class="row">	
+				        <legend>Rentrer les infos des items</legend>
+				      </div>
+					 
+					<!--Formulaire fait 12 colones-->
+				<form class="form-horizontal col-sm-12">
+					
+						<!--Premiere moitie de page (6 colones)-->
+				   <div class="col-sm-6">
+			          
+					       <!--Type d'articles en menu deroulant-->
+					<div class="row">
+                         <div class="form-group">
+                            <label for="type_carte" class="col-sm-3 control-label">Type d'article : </label>
+                              <div class="col-sm-9">  
+						        <select class="form-control">
+                                <option>Livre</option>
+                                 <option>Musique</option>
+                                 <option> Sports et Loisirs</option>
+                                </select> 
+                             </div>
+                          </div>
+		            </div>
+					   <!--Nom-->
+				     <div class="row">
+                      <div class="form-group">
+                       <label for="nom" class="col-sm-3 control-label">Nom : </label>
+                         <div class="col-sm-9">
+                           <input name ="nom" id="nom" placeholder="Nom de l'article" type="text" class="form-control">
+                        </div>
+                      </div>
+		             </div>
+					   
+					   
+					   <!--Description-->
+                   <div class="row">
+                    <div class="form-group">
+                     <label for="descritpion" class="col-sm-3 control-label">Description : </label>
+                       <div class="col-sm-9">
+                        <input name ="description" id="descritpion" placeholder="Descritpion de l'article" type="text" class="form-control">
+                        </div>
+                    </div>
+		           </div>
+					   
+
+					   
+					      <!--Prix-->
+					<div class="row">
+					   
+                  <div class="form-group">
+					  <label for="prix" class="col-sm-3 control-label">Prix : </label>
+                        <div class="input-group">
+						   <div class="col-sm-9">
+                          <input name ="prix" id="prix" placeholder="Le prix" type="number" class="form-control">
+                        
+                         <span class="input-group-addon">€</span>
+							  </div>
+                      </div>
+                </div>
+					
+					 </div>
+					   
+					   
+
+			</div>
+					
+					
+					<!-- Deuxieme moitie de page (de la 6eme a la 12eme colone)-->
+				
+					<div class="col-sm-6">
+						
+					<div class="row">
+                        <div class="form-group">
+                         <div class="col-sm-offset-4 col-sm-8">
+				           <img src="Profil.jpg" class="img-circle"> 
+							 <br> <br>
+                            <input name ="photo_article" id="photo_article" placeholder="Nom de la photo de l'article" type="text" class="form-control">
+                       </div>  
+                     </div>
+		            </div>
+	      	   </div>
+					
+              </form>
+				
+				
+	            <!--Bouton pour crer le contact-->
+				<div class="col-sm-offset-9 col-sm-3">
+                   <button type="submit" class="pull-right btn btn-default">Ajouter l'article</button> <br> <br>
+                </div>
+
+		    </div>
+		</div>
+	</body>
+</html> 
+
+
+    
+
+
+ 
