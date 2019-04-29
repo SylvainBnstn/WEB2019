@@ -1,18 +1,27 @@
 .toolbarstyle{
-    height: 40px;
-    font-size: 20pt;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    border-left: 3px solid white;
-    border-right: 3px solid white;
+	height: 40px;
+	font-size: 20pt;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	border-left: 3px solid white;
+  	border-right: 3px solid white;
 }
-
 
 .connexion_form
 {
-	text-align: center;
-		
+	text-align: center;		
 }
 
-.img { width: 100%; }
+.homestyle{
+	font-size: 20pt;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	height: 100%;
+}
+
+.choicestyle{
+	margin-top: 20px;
+	text-align: center;
+}
