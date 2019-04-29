@@ -1,0 +1,9 @@
+.toolbarstyle{
+	height: 40px;
+	font-size: 20pt;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	border-left: 3px solid white;
+  	border-right: 3px solid white;
+}
