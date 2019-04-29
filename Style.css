@@ -7,3 +7,11 @@
 	border-left: 3px solid white;
   	border-right: 3px solid white;
 }
+
+.homestyle{
+	font-size: 20pt;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	height: 100%;
+}
