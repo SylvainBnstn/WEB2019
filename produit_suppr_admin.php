@@ -23,7 +23,7 @@ if (isset($_SESSION["Connected_vendeur"])&&$_SESSION["Connected_vendeur"]==true)
 	if (isset($_POST['Supprimer_item'])) {
 		$requete = $conn->prepare("DELETE FROM produit WHERE Id_produit = $id_product");
 		$requete->execute();
-		header('location: Accueil-Admin.php');
+		header('location: vendeur-votrecompte.php');
 	}
 	
 
