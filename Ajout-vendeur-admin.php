@@ -129,7 +129,7 @@ if(($_FILES["photo"]))
           $sql->execute([$nom,$prenom,$pseudo,$photo,$type,$email,$mdp,$photo_fond]); 
 				$last_id = $conn->lastInsertId();
             	$_SESSION["Id_user"]=$last_id;   
-	           header('location: Accueil-Admin.php');//renvoie a la page de connexion du vendeur
+	           header('location: vendeur-votrecompte.php');//renvoie a la page de connexion du vendeur
 		
 	         }
 		   
