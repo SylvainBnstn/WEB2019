@@ -70,7 +70,7 @@ catch(PDOException $e)
             $add = $conn->prepare("UPDATE acheteur SET Nom = '$nom', Prenom = '$prenom', Mdp = '$mdp', Pseudo = '$pseudo', Adresse1 = '$adresse', Adresse2 = '$adresse2', Ville = '$ville', CodePostal = '$code_postal', Pays = '$pays', Num_tel = '$telephone', Mail = '$email', Numero_carte = '$numero_carte', Type_carte = '$type_carte', Nom_carte = '$nom_proprio', Date_expi = '$expiration', Code_secu = '$crypto' WHERE Id_acheteur = $id_to_treat");
               $add->execute();
               header('location: acheteur-panier.php');
-              unset($_SESSION["Default_user"]);
+              $_SESSION["Default_user"]=false;
           }
         	else{
         		if ($pseudoexiste != 0) {

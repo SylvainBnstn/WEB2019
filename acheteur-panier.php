@@ -15,25 +15,26 @@ catch(PDOException $e)
 	echo "Connection failed: " . $e->getMessage();
 }
 
-if (isset($_SESSION["Connected_acheteur"])&&$_SESSION["Connected_acheteur"]==true&&(isset($_SESSION["Default_user"]))) {
+if (isset($_SESSION["Connected_acheteur"])&&$_SESSION["Connected_acheteur"]==true&&(isset($_SESSION["Default_user"])&&$_SESSION["Default_user"]==true)) {
 	
 	$id_client=$_SESSION["Id_client"];
 	$panierproduct=$conn->prepare("SELECT * FROM panier WHERE Id_acheteur LIKE $id_client AND Etat_transac=0");
 	$panierproduct->execute();
 	$nbproduct=$panierproduct->rowCount();
 	if (isset($_POST['acheter_panier'])) {
+		unset($_SESSION["Panier"]);
 		header('location: compte_acheteur.php');
 	}
 }
 
-if (isset($_SESSION["Connected_acheteur"])&&$_SESSION["Connected_acheteur"]==true&&(!isset($_SESSION["Default_user"]))) {
+if (isset($_SESSION["Connected_acheteur"])&&$_SESSION["Connected_acheteur"]==true&&(!isset($_SESSION["Default_user"])||$_SESSION["Default_user"]==false)) {
 
 	$id_client=$_SESSION["Id_client"];
 	$panierproduct=$conn->prepare("SELECT * FROM panier WHERE Id_acheteur LIKE $id_client AND Etat_transac=0");
 	$panierproduct->execute();
 	$nbproduct=$panierproduct->rowCount();
 
-	if (isset($_POST['acheter_panier'])) {
+	if (isset($_POST['acheter_panier'])&&$_SESSION["Default_user"]==false) {
 		for ($i = 0 ; $i < count($_SESSION["Panier"]) ; $i++) {
 			$idprodtemp=$_SESSION["Panier"][$i];
 			$requete = $conn->prepare("UPDATE produit SET Stock = Stock-1 WHERE Id_produit = $idprodtemp ");
@@ -41,6 +42,7 @@ if (isset($_SESSION["Connected_acheteur"])&&$_SESSION["Connected_acheteur"]==tru
 			$requete2 = $conn->prepare("UPDATE panier SET Etat_transac = 1 WHERE Id_produit = $idprodtemp");
 			$requete2->execute();
 		}
+		unset($_SESSION["Panier"]);
 		header('location: acheteur-votrecompte.php');
 		mail("haseceamazon@gmail.com", "un sujet","Merci pour votre achat effectué sur ECEAmazon. Nous vous confirmons la préparation de votre commande. A bientot!","Commande ECEAmazon");
 	}
@@ -85,7 +87,7 @@ if(!isset($_SESSION["Connected_acheteur"])||$_SESSION["Connected_acheteur"]==fal
 				<?php
 				if (isset($nbproduct)) {
 					if ($nbproduct > 0) {
-
+						unset($_SESSION["Panier"]);
 						$var = $panierproduct->fetchAll(PDO::FETCH_OBJ);
 						echo "<table class='table'>
 						<caption>Votre Panier :</caption>
