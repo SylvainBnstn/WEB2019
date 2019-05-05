@@ -1,0 +1,96 @@
+.jumbotron {	
+  padding-top: 20px;
+  padding-bottom: 20px;
+   margin-bottom: 20px;
+ height: 100px;
+ width: 300px;
+  margin-left: auto;
+    margin-right: auto;
+  color: inherit;
+  background-color: #eee;
+  text-align:center;
+	margin: 0 auto;
+}
+
+.texte
+{
+text-align: center;
+	color:white;
+	
+}
+
+
+h2
+{ 
+    text-align: center;
+	color:white;
+
+}
+
+.titre
+{
+	color: black;
+text-align: center;
+	font-size: 40px;
+	
+}
+
+.ph_profil
+{
+	height: 300px;
+	width: 300px; 
+	float: right;
+	padding:30px; 
+
+}
+
+
+.connexion_form
+{
+	text-align: center;	
+}
+
+.toolbarstyle{
+    height: 40px;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}
+ 
+.homestyle{
+    font-size: 20pt;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    height: 100%;
+}
+ 
+.choicestyle
+{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.overlay
+{ 
+	position: absolute;  
+	min-height: 100%; 
+    min-width: 100%; 
+	left: 0px;
+	top: 0px; 
+	background-color: rgba(0, 0, 0, 0.4);
+	
+} 
+
+.img
+{
+  height: 300px;
+  width: 300px; 
+  float: right;
+  padding:30px; 
+
+}
